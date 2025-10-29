@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyoubRun — Le Dino sans limite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Ayoub<span>Run</span></div>
+        <div class="tagline">Mode avion activé. Gameplay survitaminé.</div>
+        <div class="header-actions">
+            <button id="startButton" class="chip">Lancer</button>
+            <button id="pauseButton" class="chip">Pause</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="intro-copy">
+                <h1>Découvrez le Dino 2.0</h1>
+                <p>Course infinie, météo dynamique, power-ups quantiques et obstacles intelligents. Vous pensez connaître le jeu hors ligne&nbsp;? Rebranchez vos réflexes.</p>
+                <ul class="features">
+                    <li>Cycle jour/nuit avec météo réactive</li>
+                    <li>Power-ups&nbsp;: bouclier, boost d'énergie, ralentissement temporel</li>
+                    <li>Obstacles au sol et drones aériens</li>
+                    <li>Compatibilité clavier &amp; tactile</li>
+                </ul>
+            </div>
+            <div class="score-panel">
+                <div class="score">Score&nbsp;<span id="score">0</span></div>
+                <div class="score">Record&nbsp;<span id="highScore">0</span></div>
+                <div class="status" id="statusMessage">Appuie sur Lancer pour démarrer</div>
+                <div class="powerup-display" id="powerupStatus">Aucun power-up actif</div>
+            </div>
+        </section>
+
+        <section class="game-wrapper">
+            <canvas id="gameCanvas" width="960" height="340" role="presentation"></canvas>
+            <div class="overlay" id="gameOverlay" aria-live="polite"></div>
+            <div class="touch-controls">
+                <button id="jumpButton" aria-label="Sauter">Saut</button>
+                <button id="dashButton" aria-label="Dash">Dash</button>
+            </div>
+        </section>
+
+        <section class="guide">
+            <h2>Commandes</h2>
+            <div class="guide-grid">
+                <article>
+                    <h3>Clavier</h3>
+                    <p>Espace ou ⬆️ pour sauter, ⬇️ pour dash/slide, P pour pause.</p>
+                </article>
+                <article>
+                    <h3>Tactile</h3>
+                    <p>Bouton gauche pour sauter, bouton droit pour dash. Support multi-touch.</p>
+                </article>
+                <article>
+                    <h3>Objectifs</h3>
+                    <p>Collecte les orbes luminescentes pour activer les power-ups. Survis plus longtemps pour accélérer et battre ton record.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> AyoubRun. record sauvegardé.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
